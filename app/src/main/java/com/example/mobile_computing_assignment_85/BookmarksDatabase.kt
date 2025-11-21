@@ -13,7 +13,6 @@ import androidx.room.RoomDatabase
 )
 abstract class BookmarkDatabase : RoomDatabase() {
     abstract fun bookmarkDao(): BookmarkDao
-    abstract fun getInstance(activity: MainActivity): BookmarkDatabase
 
     companion object {
         private var INSTANCE: BookmarkDatabase? = null
