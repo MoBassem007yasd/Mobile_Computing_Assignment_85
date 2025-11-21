@@ -5,19 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="-21dp">
 
     <EditText
         android:id="@+id/TitleInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Title"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/LinkInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +36,10 @@
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="13dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Link"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/CategoryInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +54,10 @@
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="Category"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/AddBookmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,26 +67,30 @@
         android:id="@+id/ShowAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="-150dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="-36dp"
         android:text="Show All"
         app:layout_constraintBottom_toTopOf="@+id/DBList"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/DBList"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="9dp"
         android:text="Filter"
         app:layout_constraintBottom_toTopOf="@+id/DBList"
         app:layout_constraintEnd_toStartOf="@+id/ShowAll"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Spinner"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/Spinner" />
 
     <Button
         android:id="@+id/AddBookmark"
@@ -87,7 +99,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="173dp"
-        android:layout_marginBottom="83dp"
+        android:layout_marginBottom="10dp"
         android:text="Add"
         app:layout_constraintBottom_toTopOf="@+id/Spinner"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,21 +108,27 @@
 
     <ListView
         android:id="@+id/DBList"
-        android:layout_width="410dp"
-        android:layout_height="276dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="455dp" />
+        android:layout_width="397dp"
+        android:layout_height="409dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ShowAll"
+        tools:ignore="VisualLintBounds" />
 
     <Spinner
         android:id="@+id/Spinner"
-        android:layout_width="409dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/ShowAll"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddBookmark" />
 
